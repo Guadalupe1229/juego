@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Descarga - Explorador de Acertijos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0b3b2e, #123b5a);
+            color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.35);
+            border-radius: 20px;
+            padding: 30px 24px 32px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2rem;
+            letter-spacing: 0.03em;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 0.98rem;
+            color: #cfe7df;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .sections {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: rgba(12, 30, 28, 0.8);
+            border-radius: 16px;
+            padding: 18px 16px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+            color: #d6f3ea;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 2px 10px;
+            font-size: 0.7rem;
+            border-radius: 999px;
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.16);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: #0b1814;
+            background: #8ff6c2;
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+            transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.12s ease;
+            margin-top: 4px;
+        }
+
+        .btn span {
+            margin-left: 6px;
+            font-size: 0.8rem;
+            opacity: 0.85;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.55);
+            background: #a4ffd0;
+        }
+
+        .btn:active {
+            transform: translateY(0px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #b9d6cd;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Explorador de Acertijos</h1>
+    <p class="subtitle">
+        Resuelve acertijos, cuida tus vidas y esquiva al águila.  
+        Descarga la versión que prefieras:
+    </p>
+
+    <div class="sections">
+
+        <!-- MÓVIL -->
+        <div class="card">
+            <div class="tag">Android</div>
+            <h2>Descargar para celular</h2>
+            <p>
+                Versión APK para instalar en dispositivos Android.
+                Ideal para jugar con botones táctiles y disfrutar los acertijos en cualquier lugar.
+            </p>
+            <!-- 🔗 Cambia el href por el enlace real a tu APK -->
+            <a class="btn" href="/app/BosqueMagicoVideojuego.apk" download>
+                Descargar APK
+                <span>📱</span>
+            </a>
+        </div>
+
+        <!-- PC -->
+        <div class="card">
+            <div class="tag">Windows / PC</div>
+            <h2>Descargar para computadora</h2>
+            <p>
+                Versión para escritorio, recomendada para jugar con teclado.
+                Incluye el mismo contenido y niveles que la app móvil.
+            </p>
+            <!-- 🔗 Cambia el href por el enlace a tu .zip o .exe -->
+            <a class="btn" href="/app/BosqueMagico.exe" download>
+                Descargar para PC
+                <span>💻</span>
+            </a>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        Hecho con cariño y muchos acertijos 💚
+    </div>
+</div>
+
+</body>
+</html>
